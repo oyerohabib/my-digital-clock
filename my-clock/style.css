@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #131419;
+  font-family: 'Orbitron', sans-serif;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.clock-box {
+  box-sizing: border-box;
+  width: 500px;
+  height: 150px;
+  display: flex;
+  position: relative;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 19px;
+  background: #131419;
+  box-shadow: -5px 5px 15px #0d0e11, 
+              5px -5px 15px #191a21;
+}
+.clock-box span {
+  text-align: center;
+  font-size: 60px;
+  transition: color .5s;
+}
+#clock-box__content {
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+#clock-box__content span:nth-child(1),
+#clock-box__content span:nth-child(3),
+#clock-box__content span:nth-child(5) {
+  width: 30%;
+}
+#clock-box__content span:nth-child(2),
+#clock-box__content span:nth-child(4) {
+  width: 5%;
+}
+#clock-box__state {
+  position: relative;
+  width: 25%;
+  text-align: center;
+}
+#clock-box__state:before {
+  content: '';
+  left: -10px;
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: #131419;
+  box-shadow: -3px 3px 2px #0d0e11, 
+              3px -3px 2px #191a219c;
+}
+.clock-box .clock-box__color {
+  height: 150px;
+  position: absolute;
+  right: -100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.clock-box__color .color__item {
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  background: #131419;
+  box-shadow: -5px 5px 12px #0d0e11, 
+              5px -5px 12px #191a219c;
+  transition: .5s;
+}
+.clock-box__color .color--active {
+  border-radius: 5px;
+  background: #131419;
+  box-shadow: inset -5px 5px 14px #0d0e11, 
+              inset 5px -5px 14px #191a21,
+              1px 1px 3px #191a21,
+              1px 1px 3px #191a21;
+}
+.day-box {
+  margin: 20px;
+  padding: 0 20px;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+.day-box span {
+  padding: 10px;
+  border-radius: 5px;
+  background: #131419;
+  box-shadow: -5px 5px 12px #0d0e11, 
+              5px -5px 12px #191a21;
+  transition: .5s;
+}
+.text--blue {
+  color: #00f2ff52;
+}
+.clock-box__color .text--blue:hover {
+  text-shadow: 0 0 10px #00f2ff52;
+}
+.text--blue-active {
+  color: #00f3ff;
+  text-shadow: 0 0 3px #00f3ff;
+}
+.text-clock--blue {
+  color: #00f3ff;
+  text-shadow: 0 0 10px #00f3ff;
+}
+.text--red {
+  color: #ff000052;
+}
+.clock-box__color .text--red:hover {
+  text-shadow: 0 0 10px #ff000052;
+}
+.text--red-active {
+  color: #ff0000;
+  text-shadow: 0 0 3px #ff0000;
+}
+.text-clock--red {
+  color: #ff0000;
+  text-shadow: 0 0 10px #ff0000;
+}
+.text--green {
+  color: #00ff0052;
+}
+.clock-box__color .text--green:hover {
+  text-shadow: 0 0 10px #00ff0052;
+}
+.text--green-active {
+  color: #00ff00;
+  text-shadow: 0 0 3px #00ff00;
+}
+.text-clock--green {
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00;
+}
